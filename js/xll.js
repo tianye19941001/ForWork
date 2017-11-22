@@ -23,22 +23,18 @@ $(document).ready(function(){
 		}
 	}
 
+	function adddelay(obj,time){
+		if (obj.length>0) {
+			for (var i = 0; i < obj.length; i++) {
+				obj.eq(i).addClass('an_delay'+(i*time+3));
+			}
+		}
+	}
+
 	if (document.body.clientWidth>=768) {
 		// pc事件和方法
 		
 	}else{
-		// rem自动计算
-        fnResize();
-        window.addEventListener("resize", function() {
-            fnResize()
-        }, false);
-
-        function fnResize(){
-            var docWidth = document.documentElement.clientWidth,
-                body = document.getElementsByTagName('html')[0];
-            body.style.fontSize = docWidth / 32 + 'px';
-        }
-
         // 移动事件和方法
        
 	}
