@@ -60,7 +60,15 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff; }
 	@extend .ty_index_de1;
 	.left_img{ width: 600px; border: 20px solid #fdb918; float: left;}
 }
-
+// 内容页
+.ty_text_con{ padding: 120px 60px;
+	h2{ text-align: center; font-size: 30px; color: #0073b6; margin-bottom: 100px; 
+		span{ display: block; text-align: center; font-size: 14px; color: #535353; margin-top: 20px; }
+		strong{ font-size: 30px; color: #fdb918; margin-right: 12px; }
+	}
+	p{ font-size: 14px; color: #818181; line-height: 32px; }
+	>img{ max-width: 100%; display: block; margin: 20px auto; }	
+}
 // 动画
 .an_toLeft {
     animation: toLeft 0.5s linear 0s;
