@@ -15,7 +15,7 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff; }
 }
 
 // 首页
-.ty_con{ width: 1260px; background-color: #fff; margin: 0 auto; }
+.ty_con{ width: 1260px; background-color: #fff; margin: 0 auto; margin-top: -60px; position: relative; z-index: 3; }
 .ty_index_de1{
 	@extend .clearfix;
 	margin-bottom: 100px;
@@ -58,16 +58,41 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff; }
 
 .ty_index_team{
 	@extend .ty_index_de1;
+	background: url("../../images/ty/test3.png") no-repeat center center;
 	.left_img{ width: 600px; border: 20px solid #fdb918; float: left;}
 }
+
+.ty_index_news{ width: 1100px; margin: 0 auto; @extend .clearfix; position: relative;
+	.ty_tit_en{ background-color: #0073b6; padding: 0 70px; margin-bottom: 20px; }
+	.tit{ width: 500px; position: absolute; top: 50px; text-align: center;}	
+	.news{ @extend .clearfix; float: left; width: 500px; margin-left: 100px;
+		li{ float: left; width: 500px; padding-bottom: 60px;}
+		h3{ font-size: 34px; font-weight: bold; padding: 18px 0 12px; }
+		p{ font-size: 12px; color: #656565; line-height: 24px; }
+		i{ display: block; width: 100px; height: 1px; background-color: #e8e8e8; margin: 20px 0 16px; }
+		.time1{ display: block; color: #eabc2b; font-size: 14px; }
+		.time2{ display: block; color: #535353; font-size: 12px; }
+		img{ width: 100%; }
+		&:first-child{ margin-left: 0; padding-top: 200px; }
+	}
+	.ty_more{ float: right;  border: 60px solid #0073b6; border-width: 40px 60px; }
+}
 // 内容页
-.ty_text_con{ padding: 120px 60px;
+.ty_bannar{ height: 400px; width: 100%; min-width: 1260px; overflow: hidden;
+	img{ height: 100%; position: relative; left: 50%; transform: translateX(-50%); }
+}
+.ty_text_con{ padding: 120px 60px 100px; margin-top: -130px;
 	h2{ text-align: center; font-size: 30px; color: #0073b6; margin-bottom: 100px; 
 		span{ display: block; text-align: center; font-size: 14px; color: #535353; margin-top: 20px; }
 		strong{ font-size: 30px; color: #fdb918; margin-right: 12px; }
 	}
 	p{ font-size: 14px; color: #818181; line-height: 32px; }
-	>img{ max-width: 100%; display: block; margin: 20px auto; }	
+	>img{ max-width: 100%; display: block; margin: 40px auto; }	
+	.two_pic{ @extend .clearfix; margin: 40px auto;
+		img{ float: left; width: 49%; 
+			&:last-child{ float: right; }
+		}
+	}
 }
 // 动画
 .an_toLeft {
