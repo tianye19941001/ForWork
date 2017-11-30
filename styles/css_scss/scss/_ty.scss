@@ -16,7 +16,12 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff; }
 
 // 首页
 .ty_con{ width: 1260px; background-color: #fff; margin: 0 auto; margin-top: -60px; position: relative; z-index: 3; }
-.ty_index_de1{
+.ty_swiper{ height: 700px; overflow: hidden;
+	img{ height: 100%; position: absolute; left: 50%; transform: translateX(-50%); }
+	.swiper-container{ height: 700px; }
+	.swiper-slide{ position: relative }
+}
+.ty_index_de1{ padding-top: 80px;
 	@extend .clearfix;
 	margin-bottom: 100px;
 	background: url("../../images/ty/test.png") no-repeat center center;
@@ -28,7 +33,7 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff; }
 	.middle{ float: left; width: 520px; margin-left: 65px; text-align: justify;  padding-top: 70px}
 	.ty_tit_en{ background-color: #fdb918; }
 }
-.ty_index_de2{
+.ty_index_de2{ padding-top: 0;
 	@extend .ty_index_de1;
 	background: url("../../images/ty/test2.png") no-repeat center center;
 	.big_img{ float: right; border: 20px solid #0073b6; margin-left: 0; margin-right: 60px;}
@@ -56,7 +61,7 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff; }
 	.ty_tit_cn{ margin-bottom: 30px;}
 }
 
-.ty_index_team{
+.ty_index_team{ padding-top: 0;
 	@extend .ty_index_de1;
 	background: url("../../images/ty/test3.png") no-repeat center center;
 	.left_img{ width: 600px; border: 20px solid #fdb918; float: left;}
