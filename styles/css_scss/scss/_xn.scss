@@ -57,6 +57,16 @@ body {
             background: #0073b6;
         }
     }
+    .mainb_subtitle{
+      background: #0073b6;
+        span{
+            display: block;
+            width: 80%;
+            height: 100%;
+            margin: 0 auto;
+            background: #fdb918;
+        }  
+    }
     ul {
         width: 160px;
         margin: 0 auto;
@@ -253,9 +263,10 @@ body {
 }
 
 .xn_pro_infos {
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
     margin-bottom: 200px;
+    overflow: hidden;
     .xn_infos_title {
         font-size: $font-22;
         color: #161616;
@@ -263,6 +274,7 @@ body {
     }
     img {
         margin: 10px 0;
+        object-fit: cover;
     }
 }
 
