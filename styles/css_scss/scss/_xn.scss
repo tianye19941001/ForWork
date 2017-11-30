@@ -22,6 +22,7 @@ body {
     display: table;
     background: #fff;
     overflow: hidden;
+    min-height: 800px;
 }
 
 .xn_news_slider {
@@ -31,6 +32,7 @@ body {
     .xn_slider_top {
         margin: 90px 0 70px;
     }
+    
     .title {
         font-size: $font-30;
         color: #000000;
@@ -42,7 +44,18 @@ body {
         background: #0073b6;
         color: #fff;
         font-size: $font-12;
-        padding: 10px 0;
+        height: 36px;
+        line-height: 36px;
+    }
+    .pro_subtitle{
+        background: #fdb918;
+        span{
+            display: block;
+            width: 80%;
+            height: 100%;
+            margin: 0 auto;
+            background: #0073b6;
+        }
     }
     ul {
         width: 160px;
@@ -51,6 +64,9 @@ body {
             padding: 15px 0;
             border-bottom: 1px solid #0073b6;
             font-size: $font-18;
+            text-align: left;
+            position: relative;
+            padding-left: 30px;
         }
         li:last-child {
             border: none;
@@ -59,7 +75,17 @@ body {
     a {
         color: #727272;
     }
+    li.active:before{
+            width: 15px;
+            height: 15px;
+            background: #fdb918;
+            content: "";
+            position: absolute;
+            left: 5px;
+            top: 21px;
+        }
     li.active {
+        
         a {
             color: #0073b6;
         }
@@ -216,13 +242,16 @@ body {
         margin-right: 0;
     }
 }
-.pro_banner{
+
+.pro_banner {
     width: 100%;
 }
-.pro_margin_top{
+
+.pro_margin_top {
     margin-top: -140px;
     position: relative;
 }
+
 .xn_pro_infos {
     width: 90%;
     margin: 0 auto;
@@ -232,51 +261,54 @@ body {
         color: #161616;
         margin-bottom: 10px;
     }
-    img{
-        margin:10px 0;
+    img {
+        margin: 10px 0;
     }
 }
 
 .xn_pro_txt {
     font-size: $font-14;
     color: #818181;
-    
     p {
         margin: 6px 0;
         line-height: 25px;
     }
 }
-.xn_common_footer{
+
+.xn_common_footer {
     width: 100%;
     overflow: hidden;
     background: url(../../../ForWork/images/ty/XN_I_2.png) no-repeat;
     min-height: 400px;
-    background-color:  #000000;
+    background-color: #000000;
     background-position: center center;
 }
-.xn_common_box{
-        width: $main_width;
+
+.xn_common_box {
+    width: $main_width;
     margin: 0px auto;
     padding: 70px 0;
     min-height: 400px;
     color: #ffffff;
 }
-.xn_common_lbox{
+
+.xn_common_lbox {
     float: left;
-    .company_name{
+    .company_name {
         font-size: $font-24;
         padding: 25px 0 15px
     }
-    .company_txt{
+    .company_txt {
         font-size: $font-12;
         line-height: 30px;
     }
 }
-.xn_common_rbox{
+
+.xn_common_rbox {
     float: right;
     width: 660px;
     font-size: $font-16;
-    input{
+    input {
         border: none;
         width: 100%;
         display: block;
@@ -285,9 +317,12 @@ body {
         padding: 8px 0;
         color: #fff;
         margin-bottom: 10px;
-        outline:none;
+        outline: none;
     }
-    .content{
+     ::-webkit-input-placeholder {
+        color: #fff;
+    }
+    .content {
         border: none;
         width: 100%;
         display: block;
@@ -295,6 +330,34 @@ body {
         background: none;
         padding: 8px 0;
         color: #fff;
-        outline:none;
+        outline: none;
+        resize: none;
+        height: 60px;
+    }
+    .btn_submit{
+        background: #fdb918;
+        border: none;
+        margin-top: 12px;
+        cursor: pointer;
+        color: #000;
+        letter-spacing: 5px;
+        padding: 10px 0;
+        font-size: $font-20;
+    }
+}
+.xn_brand_box{
+    width: 88%;
+    margin: 0 auto;
+    .title{
+        font-size: $font-30;
+        color: #0073b6;
+        padding: 140px 0 130px;
+        text-align: center;
+    }
+    a{
+        margin: 30px 40px;
+    }
+    a:nth-child(5n+5){
+        margin-right: 0;
     }
 }

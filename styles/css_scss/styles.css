@@ -165,7 +165,7 @@ body {
 
 @media screen and (min-width: 0px) and (max-width: 768px) {
   body .demo {
-    width: 1.3888888889rem; } }
+    width: 1.38889rem; } }
 .ty_con {
   width: 1260px;
   background-color: #fff;
@@ -415,7 +415,8 @@ body {
   margin: 0 auto 70px;
   display: table;
   background: #fff;
-  overflow: hidden; }
+  overflow: hidden;
+  min-height: 800px; }
 
 .xn_news_slider {
   float: left;
@@ -433,18 +434,38 @@ body {
     background: #0073b6;
     color: #fff;
     font-size: 12px;
-    padding: 10px 0; }
+    height: 36px;
+    line-height: 36px; }
+  .xn_news_slider .pro_subtitle {
+    background: #fdb918; }
+    .xn_news_slider .pro_subtitle span {
+      display: block;
+      width: 80%;
+      height: 100%;
+      margin: 0 auto;
+      background: #0073b6; }
   .xn_news_slider ul {
     width: 160px;
     margin: 0 auto; }
     .xn_news_slider ul li {
       padding: 15px 0;
       border-bottom: 1px solid #0073b6;
-      font-size: 18px; }
+      font-size: 18px;
+      text-align: left;
+      position: relative;
+      padding-left: 30px; }
     .xn_news_slider ul li:last-child {
       border: none; }
   .xn_news_slider a {
     color: #727272; }
+  .xn_news_slider li.active:before {
+    width: 15px;
+    height: 15px;
+    background: #fdb918;
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 21px; }
   .xn_news_slider li.active a {
     color: #0073b6; }
 
@@ -633,6 +654,8 @@ body {
     color: #fff;
     margin-bottom: 10px;
     outline: none; }
+  .xn_common_rbox ::-webkit-input-placeholder {
+    color: #fff; }
   .xn_common_rbox .content {
     border: none;
     width: 100%;
@@ -641,6 +664,30 @@ body {
     background: none;
     padding: 8px 0;
     color: #fff;
-    outline: none; }
+    outline: none;
+    resize: none;
+    height: 60px; }
+  .xn_common_rbox .btn_submit {
+    background: #fdb918;
+    border: none;
+    margin-top: 12px;
+    cursor: pointer;
+    color: #000;
+    letter-spacing: 5px;
+    padding: 10px 0;
+    font-size: 20px; }
+
+.xn_brand_box {
+  width: 88%;
+  margin: 0 auto; }
+  .xn_brand_box .title {
+    font-size: 30px;
+    color: #0073b6;
+    padding: 140px 0 130px;
+    text-align: center; }
+  .xn_brand_box a {
+    margin: 30px 40px; }
+  .xn_brand_box a:nth-child(5n+5) {
+    margin-right: 0; }
 
 /*# sourceMappingURL=styles.css.map */
