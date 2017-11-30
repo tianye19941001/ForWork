@@ -49,6 +49,8 @@
 			</div>
 		</div>
 		<div class="pagination"></div>
+		<i class="icon icon_left"></i>
+		<i class="icon icon_right"></i>
 	</div>
 	<!-- 主体 -->
 	<div class="ty_con">
@@ -78,7 +80,38 @@
 			<em class="ty_tit_en">Cultural concept</em>
 			<h2 class="ty_tit_cn">文化理念 /</h2>
 			<div class="ty_swiper_in">
-
+				<div class="swiper-container2">
+				    <div class="swiper-wrapper">
+				    	<div class="swiper-slide">
+				    		<img src="images/ty/A19.png" alt="">
+				        	<h3>进出口贸易</h3>
+				        	<p>import and export trade</p>
+				 		</div>
+				    	<div class="swiper-slide">
+							<img src="images/ty/A21.png" alt="">
+					        <h3>投资管理</h3>
+					        <p>Investment management</p>
+				        </div>
+				    	<div class="swiper-slide">
+					    	<img src="images/ty/A23.png" alt="">
+				    		<h3>物业管理</h3>
+					        <p>Property management</p>
+				    	</div>
+				    	<div class="swiper-slide">
+					    	<img src="images/ty/A29.png" alt="">
+				    		<h3>关于我们</h3>
+					        <p>Property management</p>
+					    </div>
+				    	<div class="swiper-slide">
+				    		<img src="images/ty/A33.png" alt="">
+				    		<h3>可选研究</h3>
+					        <p>Property management</p>
+					    </div>
+				    </div>
+				    <div class="pagination2"></div>
+				</div>
+				<i class="icon icon_left"></i>
+				<i class="icon icon_right"></i>
 			</div>
 			<a class="ty_more" href="">所有业务 / All</a>
 		</div>
@@ -156,6 +189,12 @@
 			grabCursor: true,
 			paginationClickable: true,
 			autoplay : 5000
+		})
+		var mySwiper2 = new Swiper('.swiper-container2',{
+			pagination: '.pagination2',
+			paginationClickable: true,
+		    slidesPerView: 3,
+		    loop:true
 		})
 	</script>
 </body>
