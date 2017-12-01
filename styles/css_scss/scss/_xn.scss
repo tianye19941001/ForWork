@@ -32,7 +32,6 @@ body {
     .xn_slider_top {
         margin: 90px 0 70px;
     }
-    
     .title {
         font-size: $font-30;
         color: #000000;
@@ -47,9 +46,9 @@ body {
         height: 36px;
         line-height: 36px;
     }
-    .pro_subtitle{
+    .pro_subtitle {
         background: #fdb918;
-        span{
+        span {
             display: block;
             width: 80%;
             height: 100%;
@@ -57,15 +56,15 @@ body {
             background: #0073b6;
         }
     }
-    .mainb_subtitle{
-      background: #0073b6;
-        span{
+    .mainb_subtitle {
+        background: #0073b6;
+        span {
             display: block;
             width: 80%;
             height: 100%;
             margin: 0 auto;
             background: #fdb918;
-        }  
+        }
     }
     ul {
         width: 160px;
@@ -85,17 +84,16 @@ body {
     a {
         color: #727272;
     }
-    li.active:before{
-            width: 15px;
-            height: 15px;
-            background: #fdb918;
-            content: "";
-            position: absolute;
-            left: 5px;
-            top: 21px;
-        }
+    li.active:before {
+        width: 15px;
+        height: 15px;
+        background: #fdb918;
+        content: "";
+        position: absolute;
+        left: 5px;
+        top: 21px;
+    }
     li.active {
-        
         a {
             color: #0073b6;
         }
@@ -201,7 +199,37 @@ body {
 }
 
 .xn_about_top {
-    width: 60%;
+    width: 100%;
+    margin-bottom: 70px;
+    img{
+        width: 40%;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .xn_about_txt{
+        margin-left: 35px;
+        width: 50%;
+        display: inline-block;
+        vertical-align: top;
+    }
+    ul{
+        li{
+            font-size: $font-12;
+            color: #999;
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+        }
+        li:first-child{
+            padding-top: 10px;
+        }
+        li:last-child{
+            border-bottom:0;
+        }
+        .about_title{
+            padding: 15px 0;
+            font-size: $font-16;
+        }
+    }
 }
 
 .xn_about_title {
@@ -261,7 +289,10 @@ body {
     margin-top: -140px;
     position: relative;
 }
-
+.about_margin_top{
+     margin-top: -670px;
+    position: relative;
+}
 .xn_pro_infos {
     width: 80%;
     margin: 0 auto;
@@ -294,10 +325,16 @@ body {
     min-height: 400px;
     background-color: #000000;
     background-position: center center;
+    .copyright {
+        color: #fff;
+        text-align: center;
+        font-size: $font-14;
+        padding-bottom: 30px;
+    }
 }
 
 .xn_common_box {
-    width: $main_width;
+    width: $main_width+60;
     margin: 0px auto;
     padding: 70px 0;
     min-height: 400px;
@@ -313,6 +350,25 @@ body {
     .company_txt {
         font-size: $font-12;
         line-height: 30px;
+    }
+    .company_contact {
+        margin-top: 10px;
+        .icon {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-image: url("../../images/ty/XN_contact.png");
+            background-repeat: no-repeat;
+        }
+        .icon_wb {
+            background-position: 0 0;
+        }
+        .icon_qq {
+            background-position: -40px 0;
+        }
+        .icon_wx {
+            background-position: -80px 0;
+        }
     }
 }
 
@@ -346,7 +402,7 @@ body {
         resize: none;
         height: 60px;
     }
-    .btn_submit{
+    .btn_submit {
         background: #fdb918;
         border: none;
         margin-top: 12px;
@@ -357,26 +413,43 @@ body {
         font-size: $font-20;
     }
 }
-.xn_brand_box{
+
+.xn_brand_box {
     width: 88%;
     margin: 0 auto;
-    .title{
+    .title {
         font-size: $font-30;
         color: #0073b6;
         padding: 140px 0 130px;
         text-align: center;
     }
-    a{
+    a {
         margin: 30px 40px;
     }
-    a:nth-child(5n+5){
+    a:nth-child(5n+5) {
         margin-right: 0;
     }
 }
-.xn_mainb_infos{
-    .title{
+
+.xn_mainb_infos {
+    .title {
         font-size: $font-24;
         color: #000000;
         margin: 8px 0;
+    }
+}
+
+.xn_common_line {
+    width: 100%;
+    height: 12px;
+    background: #0073b6;
+    position: relative;
+    .line_yellow {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50%;
+        height: 12px;
+        background: #fdb918;
     }
 }
