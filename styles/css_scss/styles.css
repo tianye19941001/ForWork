@@ -165,7 +165,7 @@ body {
 
 @media screen and (min-width: 0px) and (max-width: 768px) {
   body .demo {
-    width: 1.3888888889rem; } }
+    width: 1.38889rem; } }
 .ty_con {
   width: 1260px;
   background-color: #fff;
@@ -699,5 +699,10 @@ body {
     margin: 30px 40px; }
   .xn_brand_box a:nth-child(5n+5) {
     margin-right: 0; }
+
+.xn_mainb_infos .title {
+  font-size: 24px;
+  color: #000000;
+  margin: 8px 0; }
 
 /*# sourceMappingURL=styles.css.map */
