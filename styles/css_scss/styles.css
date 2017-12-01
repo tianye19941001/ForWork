@@ -595,7 +595,8 @@ body {
     overflow: hidden; }
     .xn_about_top .xn_about_gs img {
       width: 100%;
-      object-fit: cover; }
+      object-fit: cover;
+      margin-bottom: 20px; }
     .xn_about_top .xn_about_gs .title {
       text-align: center;
       color: #000000;
