@@ -543,8 +543,11 @@ body {
   .xn_news_footer .xn_footer_main {
     width: 1460px;
     margin: 95px auto;
-    font-size: 18px; }
+    font-size: 18px;
+    clear: both;
+    display: table; }
   .xn_news_footer .copyright {
+    clear: both;
     width: 100%;
     text-align: center;
     margin-bottom: 30px;
@@ -553,6 +556,31 @@ body {
     color: #8f8f8f;
     margin-right: 30px; }
 
+.xn_footer_links {
+  float: left;
+  width: 70%; }
+
+.xn_footer_icon {
+  float: right; }
+  .xn_footer_icon .icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-image: url("../../images/ty/icons.png"); }
+  .xn_footer_icon a {
+    display: inline-block;
+    margin-right: 0; }
+  .xn_footer_icon .icon_qq {
+    background-position: 0 -2px; }
+  .xn_footer_icon .icon_wx {
+    background-position: -50px -2px; }
+  .xn_footer_icon .icon_pyq {
+    background-position: -95px -2px; }
+  .xn_footer_icon .icon_wb {
+    background-position: -140px -2px; }
+  .xn_footer_icon .icon_bd {
+    background-position: -187px -2px; }
+
 .xn_about_box {
   width: 100%;
   overflow: hidden; }
@@ -560,10 +588,18 @@ body {
 .xn_about_top {
   width: 100%;
   margin-bottom: 70px; }
-  .xn_about_top img {
+  .xn_about_top .xn_about_gs {
     width: 40%;
     display: inline-block;
-    vertical-align: top; }
+    vertical-align: top;
+    overflow: hidden; }
+    .xn_about_top .xn_about_gs img {
+      width: 100%;
+      object-fit: cover; }
+    .xn_about_top .xn_about_gs .title {
+      text-align: center;
+      color: #000000;
+      font-size: 16px; }
   .xn_about_top .xn_about_txt {
     margin-left: 35px;
     width: 50%;

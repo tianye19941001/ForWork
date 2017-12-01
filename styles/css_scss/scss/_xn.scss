@@ -180,8 +180,11 @@ body {
         width: $main_width+200;
         margin: 95px auto;
         font-size: $font-18;
+        clear: both;
+        display: table;
     }
     .copyright {
+        clear: both;
         width: 100%;
         text-align: center;
         margin-bottom: 30px;
@@ -190,6 +193,38 @@ body {
     a {
         color: #8f8f8f;
         margin-right: 30px;
+    }
+}
+.xn_footer_links{
+    float: left;
+    width: 70%;
+}
+.xn_footer_icon {
+    float: right;
+    .icon {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-image: url("../../images/ty/icons.png")
+    }
+    a{
+        display: inline-block;
+        margin-right: 0;
+    }
+    .icon_qq {
+        background-position: 0 -2px;
+    }
+    .icon_wx {
+        background-position: -50px -2px;
+    }
+    .icon_pyq {
+        background-position: -95px -2px;
+    }
+    .icon_wb{
+        background-position: -140px -2px;
+    }
+    .icon_bd{
+        background-position: -187px -2px;
     }
 }
 
@@ -201,31 +236,41 @@ body {
 .xn_about_top {
     width: 100%;
     margin-bottom: 70px;
-    img{
+    .xn_about_gs {
         width: 40%;
         display: inline-block;
         vertical-align: top;
+        overflow: hidden;
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+        .title{
+            text-align: center;
+            color: #000000;
+            font-size: $font-16;
+        }
     }
-    .xn_about_txt{
+    .xn_about_txt {
         margin-left: 35px;
         width: 50%;
         display: inline-block;
         vertical-align: top;
     }
-    ul{
-        li{
+    ul {
+        li {
             font-size: $font-12;
             color: #999;
             padding: 20px 0;
             border-bottom: 1px solid #eee;
         }
-        li:first-child{
+        li:first-child {
             padding-top: 10px;
         }
-        li:last-child{
-            border-bottom:0;
+        li:last-child {
+            border-bottom: 0;
         }
-        .about_title{
+        .about_title {
             padding: 15px 0;
             font-size: $font-16;
         }
@@ -289,10 +334,12 @@ body {
     margin-top: -140px;
     position: relative;
 }
-.about_margin_top{
-     margin-top: -670px;
+
+.about_margin_top {
+    margin-top: -670px;
     position: relative;
 }
+
 .xn_pro_infos {
     width: 80%;
     margin: 0 auto;
