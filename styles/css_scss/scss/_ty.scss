@@ -140,7 +140,7 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff; }
 		img{ width: 100%; }
 		&:first-child{ margin-left: 0; padding-top: 200px; }
 	}
-	.ty_more{ float: right;  border: 60px solid #0073b6; border-width: 40px 60px; }
+	.ty_more{ position: absolute; right: 0; bottom: 0;  border: 60px solid #0073b6; border-width: 40px 60px; }
 }
 // 内容页
 .ty_bannar{ height: 400px; width: 100%; min-width: 1260px; overflow: hidden;
