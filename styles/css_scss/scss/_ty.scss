@@ -199,6 +199,7 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff; }
 .icon_bottom{ background-image: url("../../images/ty/left.png"); transform: rotate(-90deg) }
 .icon_left{ background-image: url("../../images/ty/left.png"); }
 .icon_right{ background-image: url("../../images/ty/right.png"); }
+.backTop{ cursor: pointer; position: fixed; bottom: 60px; right: 50px; }
 // 动画
 .an_toLeft {
     animation: toLeft 0.5s linear 0s;

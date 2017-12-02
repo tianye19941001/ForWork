@@ -73,12 +73,22 @@ $(document).ready(function(){
 			lrbtn($('.ty_swiper_in .icon_left'), mySwiper2 , true);
 			lrbtn($('.ty_swiper_in .icon_right'), mySwiper2, false);
 		}
+		initback();
 	})();
 
 	// 事件监听
 	function lrbtn(btn,swiper,Left){
 		btn.click(function(){
 			Left ? swiper.swipePrev() : swiper.swipeNext();
+		})
+	}
+
+	function initback(){
+		var bodyEle = $('body');
+		var baclEle = $("<img class='backTop' src='images/ty/backTop.png'>");
+		bodyEle.append(baclEle);
+		$('body').on('click','.backTop',function(){
+			$('html,body').animate({scrollTop: 0},600);
 		})
 	}
 
