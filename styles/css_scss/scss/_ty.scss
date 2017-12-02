@@ -9,11 +9,57 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff; }
 .demo{ width: 100px; }
 
 @media screen and (min-width:0px) and (max-width:768px){
-	body{ 
+	body{
 		.demo{ width: rem(50); }
 	}
 }
 
+// 首页
+.ty_con{ width: 1260px; background-color: #fff; margin: 0 auto; }
+.ty_index_de1{
+	@extend .clearfix;
+	margin-bottom: 100px;
+	background: url("../../images/ty/test.png") no-repeat center center;
+	.big_img{ float: left; border: 20px solid #fdb918; margin-left: 60px;}
+	.small_img{ float: right; padding-top: 40px; margin-right: 10px}
+	.ty_tit_en{ margin-bottom: 40px; }
+	.ty_tit_cn	{ margin-bottom: 20px; }
+	.ty_text{ margin-bottom: 30px;}
+	.middle{ float: left; width: 520px; margin-left: 65px; text-align: justify;  padding-top: 70px}
+	.ty_tit_en{ background-color: #fdb918; }
+}
+.ty_index_de2{
+	@extend .ty_index_de1;
+	background: url("../../images/ty/test2.png") no-repeat center center;
+	.big_img{ float: right; border: 20px solid #0073b6; margin-left: 0; margin-right: 60px;}
+	.small_img{ float: left; padding-top: 40px; margin-right: 0; margin-left: 10px;}
+	.ty_tit_en{ background-color: #0073b6; }
+	.middle{ float: right; margin-left: 0; margin-right: 65px;}
+}
+.big_img{ width: 300px; }
+.ty_tit_cn{ font-size: 30px; color: #000; }
+.ty_text{ font-size: 12px; color: #a0a0a0; line-height: 24px;}
+.small_img{ width: 200px; margin-right: 10px; }
+.ty_more{ display: inline-block; padding: 18px 40px; color: #585858; border: 1px solid #c1c1c1; font-size: 16px;}
+.ty_tit_en{
+	display: inline-block;
+	padding: 0 40px;
+	height: 30px;
+	line-height: 30px;
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+}
+
+.ty_index_for{ text-align: center; margin-bottom: 100px;
+	.ty_tit_en{ padding: 0 50px; border-left: 20px solid #fdb918; border-right: 20px solid #fdb918; background-color: #0073b6; margin-bottom: 20px;}
+	.ty_tit_cn{ margin-bottom: 30px;}
+}
+
+.ty_index_team{
+	@extend .ty_index_de1;
+	.left_img{ width: 600px; border: 20px solid #fdb918; float: left;}
+}
 
 // 动画
 .an_toLeft {
@@ -27,7 +73,7 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff; }
 @mixin an_delay($num1,$num2){
 	@for $i from $num1 through $num2{
 		.an_delay#{$i}{ animation-delay: 0.1s*$i; }
-	} 
+	}
 }
 @include an_delay(1,40);
 

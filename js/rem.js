@@ -8,5 +8,5 @@ window.addEventListener("resize", function() {
 function fnResize(){
     var docWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
         body = document.getElementsByTagName('html')[0];
-    body.style.fontSize = docWidth / 25 + 'px';
+    body.style.fontSize = docWidth / 20 + 'px';
 }
