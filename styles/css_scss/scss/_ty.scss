@@ -109,7 +109,7 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff; }
 // 首页
 .ty_con{ width: 1260px; background-color: #fff; margin: 0 auto; margin-top: -60px; position: relative; z-index: 3; }
 .ty_swiper{ height: 720px; overflow: hidden; position: relative; width: 100%; min-width: 1260px;
-	img{ height: 100%; position: absolute; left: 50%; transform: translateX(-50%); }
+	img{ height: 100%; position: absolute; left: 50%; transform: translateX(-50%);width: 100%; }
 	.swiper-container{ height: 720px; }
 	.swiper-slide{ position: relative; overflow: hidden;}
 	.icon_left,.icon_right{ position: absolute; top: 50%; margin-top: -20px; right: 50px; z-index: 4; cursor: pointer; }
@@ -190,8 +190,8 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff; }
 	.ty_more{ position: absolute; right: 0; bottom: 0;  border: 60px solid #0073b6; border-width: 40px 60px; }
 }
 // 内容页
-.ty_bannar{ height: 400px; width: 100%; min-width: 1260px; overflow: hidden;
-	img{ height: 100%; position: relative; left: 50%; transform: translateX(-50%); }
+.ty_bannar{ min-height: 400px; width: 100%; min-width: 1260px; overflow: hidden;
+	img{ height: 100%; position: relative; left: 50%; transform: translateX(-50%);width:100%; }
 }
 .ty_text_con{ padding: 120px 60px 100px; margin-top: -130px;
 	h2{ text-align: center; font-size: 30px; color: #0073b6; margin-bottom: 100px;
