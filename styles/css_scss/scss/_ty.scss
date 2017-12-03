@@ -191,7 +191,7 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff; }
 }
 // 内容页
 .ty_bannar{ height: 400px; width: 100%; min-width: 1260px; overflow: hidden;
-	img{ height: 100%; position: relative; left: 50%; transform: translateX(-50%); }
+	img{ height: 100%; position: relative; left: 50%; transform: translateX(-50%); min-width: 100%; min-height: 100%; }
 }
 .ty_text_con{ padding: 120px 60px 100px; margin-top: -130px;
 	h2{ text-align: center; font-size: 30px; color: #0073b6; margin-bottom: 100px;

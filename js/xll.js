@@ -72,15 +72,34 @@ $(document).ready(function(){
 			lrbtn($('.ty_swiper .icon_right'), mySwiper , false);
 			lrbtn($('.ty_swiper_in .icon_left'), mySwiper2 , true);
 			lrbtn($('.ty_swiper_in .icon_right'), mySwiper2, false);
+			if ($(window).width() > 1440) {
+				resizeWH($(".ty_swiper"),720,false);
+				resizeWH($(".swiper-container"),720,false);
+			}
 		}
 		initback();
 	})();
+
+	$(window).resize(function(){
+		if ($('.ty_swiper').length) {
+			if ($(window).width() > 1440) {
+				resizeWH($(".ty_swiper"),720,false);
+				resizeWH($(".swiper-container"),720,false);
+			}
+		}
+	})
 
 	// 事件监听
 	function lrbtn(btn,swiper,Left){
 		btn.click(function(){
 			Left ? swiper.swipePrev() : swiper.swipeNext();
 		})
+	}
+
+	// 动态计算宽高
+	function resizeWH(ele,before,widthORheight){
+		var nowWidth = $(window).width();
+		widthORheight ? ele.width(nowWidth/1440*before) : ele.height(nowWidth/1440*before)
 	}
 
 	function initback(){
