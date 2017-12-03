@@ -109,7 +109,7 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff; }
 // 首页
 .ty_con{ width: 1260px; background-color: #fff; margin: 0 auto; margin-top: -60px; position: relative; z-index: 3; }
 .ty_swiper{ height: 720px; overflow: hidden; position: relative; width: 100%; min-width: 1260px;
-	img{ height: 100%; position: absolute; left: 50%; transform: translateX(-50%); }
+	img{ height: 100%; position: absolute; left: 50%; transform: translateX(-50%);width: 100%; }
 	.swiper-container{ height: 720px; }
 	.swiper-slide{ position: relative; overflow: hidden;}
 	.icon_left,.icon_right{ position: absolute; top: 50%; margin-top: -20px; right: 50px; z-index: 4; cursor: pointer; }

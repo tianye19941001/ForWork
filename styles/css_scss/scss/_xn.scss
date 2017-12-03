@@ -15,7 +15,19 @@ body {
     position: relative;
     font-family: "microsoft yahei";
 }
-
+@media screen and (min-width:0px) and (max-width:768px){
+    .xn_common_rbox{
+        width: 96%;
+        float: none;
+        margin: 0 auto;
+    }
+    .xn_common_lbox{
+        width: 96%;
+        float: none;
+        margin: 0 auto;
+    }
+    
+}
 .main_box {
     width: $main_width;
     margin: 0 auto 70px;
@@ -215,16 +227,16 @@ body {
         background-position: 0 -2px;
     }
     .icon_wx {
-        background-position: -50px -2px;
+        background-position: -40px -2px;
     }
     .icon_pyq {
-        background-position: -95px -2px;
+        background-position: -80px -2px;
     }
     .icon_wb{
-        background-position: -140px -2px;
+        background-position: -120px -2px;
     }
     .icon_bd{
-        background-position: -187px -2px;
+        background-position: -160px -2px;
     }
 }
 
@@ -337,7 +349,7 @@ body {
 }
 
 .about_margin_top {
-    margin-top: -670px;
+    margin-top: -530px;
     position: relative;
 }
 
@@ -501,3 +513,4 @@ body {
         background: #fdb918;
     }
 }
+
