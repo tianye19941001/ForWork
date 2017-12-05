@@ -9,10 +9,10 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff; }
 .demo{ width: 100px; }
 .phone{ display: none; }
 .ha{ height: auto !important; }
+.oh{ overflow: hidden; }
 @media screen and (min-width:0px) and (max-width:768px){
 	body{ min-width: 0;
 		.phone{ display: block; }
-		.ty_nav,.ty_nav2{ display: none; position: static; }
 		.ty_con{ width: 100%; margin-top: 0; position: relative; z-index: 3; }
 		.ty_swiper{ height: rem(620); overflow: hidden; position: relative; min-width: 0;
 			img{ height: 100%; position: absolute; left: 50%; transform: translateX(-50%); width: auto; }
@@ -71,8 +71,8 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff; }
 			.ty_more{ position: static; margin: 0 auto; border-width: 0; background-color: #0073b6; color: #fff; margin: rem(90) 0; }
 		}
 		.backTop{ right: rem(30); z-index: 10; }
-		.ty_bannar{ height: rem(220); width: 100%; min-width: 0; overflow: hidden; min-height: 0;
-			img{ width: 100%; height: rem(220); position: relative; left: 50%; transform: translateX(-50%); min-width: 0; min-height: 0; z-index: 9; }
+		.ty_bannar{ height: rem(400); width: 100%; min-width: 0; overflow: hidden; min-height: 0;
+			img{ width: auto; height: rem(400); position: relative; left: 50%; transform: translateX(-50%); min-width: 0; min-height: 0; z-index: 9; }
 		}
 		.ty_text_con{ padding: rem(100) rem(30); margin-top: 0;
 			h2{ font-size: rem(48); margin-bottom: rem(55); line-height: rem(70);
@@ -119,6 +119,52 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff; }
 		.icon_qq{ background-position: rem(-40) 0; }
 		.icon_wx{ background-position: rem(-80) 0; }
 		.icon_bottom{ background-size: rem(40) rem(40); margin-top: rem(100); }
+		.ty_nav,.ty_nav2{ height: rem(118); line-height: rem(118); width: 100%; min-width: 0; position: static; border-bottom: rem(10) solid #0073b6; position: relative; box-sizing: border-box;
+			.ty_nav_in{ text-align: center; }
+			.logo{ float: none; margin-left: 0; padding-top: 0;
+				img{ width: rem(270); padding-top: rem(15); display: inline-block; }
+			}
+			.nav{ display: none; }
+			&:after{ content: ""; position: absolute; right: 0; bottom: rem(-10); width: 50%; height: rem(10); background-color: #fdb918; }
+		}
+		.icon_menu{ width: rem(60); height: rem(60); display: block; position: absolute; right: rem(30); top: rem(24); background-size: rem(60) rem(60); background-image: url("../../images/ty/phone_menu.png"); background-color: #fff; }
+		.open_nav{ 
+			.ty_nav_in{ height: auto; }
+			.icon_menu{ background-image: url("../../images/ty/phone_close.jpg"); }
+			.nav{ display: block; float: none; color: #fff; font-size: 14px; margin-left: 0; height: 100%; position: fixed; left: 0; top: rem(118); z-index: 11; width: 100%; background-color: #fff; padding-top: rem(50);
+				>li{ float: none; padding: 0; cursor: pointer; position: relative; line-height: rem(60);
+					>span,>a{ color: #808080; 
+						
+					}
+					&:after{
+						content: ""; width: 1px; height: 2px; background-color: #eaeaea; height: rem(64); display: block; margin: 0 auto;
+					}
+					&:last-child{
+						&:after{ display: none; }
+					}
+					&:hover{ 
+						ul{ display: block; }
+						>span,>a{  color: #0073b6;
+							&:after{
+								content: ""; position: absolute; left: 0; top: rem(54); width: 100%; height: 2px; background-color: #fdb918;
+							}
+						}
+						i{ border-color: #0073b6; }
+					}
+					ul{ position: static; display: block; z-index: 11; background-color: #fff; padding: 0 15px; margin-left: 0;  }
+					li{ line-height: rem(60); white-space: nowrap; font-size: 12px;
+						a{ color: #919191; }
+					}
+				}
+				.on{
+					>a,>span{ position: relative;
+						&:after{content: ""; position: absolute; left: 0; top: rem(54); width: 100%; height: 2px; background-color: #fdb918;}
+					}
+				}
+				a{ color: #fff; }
+				i{ display: inline-block; margin: rem(8); margin-left: rem(16); border-right: 1px solid; border-bottom: 1px solid; width: 7.5px; height: 7.5px;  border-color: #808080; transform: rotate(45deg); }
+			}
+		}
 	}
 }
 // 导航
@@ -164,6 +210,10 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff; }
 		}
 		a{ color: #4c4c4c; 
 			&:hover{ color: #0073b6; }
+		}
+		.on{
+			>a,>span{ color: #0073b6 }
+			i{ display: block; }
 		}
 		i{ display: inline-block;  
         margin: 4px; margin-left: 15px;

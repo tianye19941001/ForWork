@@ -134,7 +134,21 @@ $(document).ready(function(){
 		// pc事件和方法
 
 	}else{
-    // 移动事件和方法
+	    // 移动事件和方法
+	    // 一些初始化操作
+	    $('.ty_nav').attr('class','ty_nav2');
+    	$('.logo img').attr("src",$('.logo img').attr('src').replace(/logo1/,"logo2"));
+    	var menuEle = $("<span class='icon_menu'></span>");
+    	$('.ty_nav_in').append(menuEle);
 
+    	$('body').on('click','.icon_menu',function(){
+    		if($('.ty_nav2').hasClass('open_nav')){
+    			$('.ty_nav2').removeClass('open_nav');
+    			$('body').removeClass('oh')
+    		}else{
+    			$('.ty_nav2').addClass('open_nav');
+    			$('body').addClass('oh')
+    		}
+    	})
 	}
 });
