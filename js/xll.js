@@ -78,6 +78,7 @@ $(document).ready(function(){
 			}
 		}
 		initback();
+		animateInit();
 	})();
 
 	$(window).resize(function(){
@@ -88,6 +89,20 @@ $(document).ready(function(){
 			}
 		}
 	})
+
+	// 动画
+	function animateInit(){
+		var toTop = '.ty_index_de1,.ty_index_de2,.ty_index_team,.ty_index_news li,.xn_brand_list img,.ty_connect_con img,.xn_news_items img,.ty_text_con img,.xn_news_list li';
+		var toLeft = '.ty_index_de1 img,.ty_index_de2 img,.ty_index_team img,.xn_common_rbox,.ty_nav_in .nav,.you_submit,.xn_items_txt';
+		var toRight = '.ty_index_de1 p,.ty_index_de2 p,.ty_index_team p,.xn_common_lbox,.ty_nav_in .logo,.ty_connect_con p,.xn_news_slider,.xn_news_items p,.ty_text_con p';
+		addAnimate($(toTop),'an_toTop');
+		addAnimate($(toLeft),'an_toLeft');
+		addAnimate($(toRight),'an_toRight');
+	}
+
+	$(window).scroll(function() {
+  		animateInit();
+	});
 
 	// 事件监听
 	function lrbtn(btn,swiper,Left){

@@ -7,13 +7,15 @@ $minW:1200px;
 body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff; }
 
 .demo{ width: 100px; }
-
+.phone{ display: none; }
+.ha{ height: auto !important; }
 @media screen and (min-width:0px) and (max-width:768px){
 	body{ min-width: 0;
+		.phone{ display: block; }
 		.ty_nav,.ty_nav2{ display: none; position: static; }
 		.ty_con{ width: 100%; margin-top: 0; position: relative; z-index: 3; }
 		.ty_swiper{ height: rem(620); overflow: hidden; position: relative; min-width: 0;
-			img{ height: 100%; position: absolute; left: 50%; transform: translateX(-50%); }
+			img{ height: 100%; position: absolute; left: 50%; transform: translateX(-50%); width: auto; }
 			.swiper-container{ height: rem(620); }
 			.swiper-slide{ position: relative; overflow: hidden;}
 			.icon_left,.icon_right{ display: none; }
@@ -50,9 +52,73 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff; }
 			.ty_more{ display: none; }
 		}
 		.ty_index_team{ padding: 0 rem(30);
-			.left_img{ width: 100%; border: 20px solid #fdb918; float: none; box-sizing: border-box; }
+			.left_img{ width: 100%; border: rem(30) solid #fdb918; float: none; box-sizing: border-box; }
 			.ty_more{ margin: 0 auto; display: block; position: relative; left: 50%; transform: translateX(-50%); }
 		}
+		.ty_index_news{ width: 100%; text-align: center;
+			.ty_tit_en{ background-color: #0073b6; padding: 0 70px; margin-bottom: rem(20); }
+			.tit{ width: 100%; position: absolute; top: rem(50); text-align: center;}
+			.news{ float: none; width: 100%; margin-left: 0; padding: 0 rem(30); box-sizing: border-box; text-align: left;
+				li{ float: none; width: 100%; padding: rem(30) 0; border-bottom: 1px solid #c1c1c1; }
+				h3{ font-size: rem(34); font-weight: normal; padding: 0; }
+				p{ font-size: rem(20); color: #656565; line-height: rem(30); word-break: break-all; }
+				i{ display: none; }
+				.time1,.time2{ display: none; }
+				.time3{ display: block; font-size: rem(26); color: #eabc2b; }
+				img{ display: none; }
+				&:first-child{ margin-left: 0; padding-top: rem(250); }
+			}
+			.ty_more{ position: static; margin: 0 auto; border-width: 0; background-color: #0073b6; color: #fff; margin: rem(90) 0; }
+		}
+		.backTop{ right: rem(30); z-index: 10; }
+		.ty_bannar{ height: rem(220); width: 100%; min-width: 0; overflow: hidden; min-height: 0;
+			img{ width: 100%; height: rem(220); position: relative; left: 50%; transform: translateX(-50%); min-width: 0; min-height: 0; z-index: 9; }
+		}
+		.ty_text_con{ padding: rem(100) rem(30); margin-top: 0;
+			h2{ font-size: rem(48); margin-bottom: rem(55); line-height: rem(70);
+				span{ display: none; }
+				.phone{ display: block !important; text-align: center; font-size: rem(24); color: #fdb918; }
+			}
+			p{ font-size: rem(28); line-height: rem(48); text-align: justify; text-indent: rem(56); }
+			>img{ max-width: 100%; display: block; margin: rem(40) auto; }
+			.two_pic{ margin: rem(40) auto;
+				img{ float: left; width: 49%;
+					&:last-child{ float: right; }
+				}
+			}
+		}
+		.ty_connect_con{ text-align: center; margin-top: 0;
+			.ty_tit_en{ width: rem(250); margin-bottom: rem(40);}
+			.ty_tit_cn{ margin-bottom: rem(10);}
+			img{ width: auto; height: rem(280); position: relative; transform: translateX(-50%); }
+			.location{ padding: rem(40) rem(30) 0;
+				h3{ font-size: rem(36); margin-bottom: rem(10); }
+				p{ font-size: rem(24); line-height: rem(48); margin-bottom: rem(20); }
+			}
+			.cooper{ width: 100%; padding: 0 rem(30); height: auto; box-sizing: border-box;
+				>div{ float: none; width: 100%; padding: rem(30) 0 rem(10); border-bottom: 1px solid #a6a6a6; }
+				h3{ color: #000; font-size: rem(36); }
+				p{ color: #818181; font-size: rem(24); line-height: rem(48); margin-bottom: 0; }
+				.m{ text-align: left; }
+				.l{ text-align: left; border-right: 0; }
+				.r{ text-align: left; border-left: 0; border-bottom: 0; }
+			}
+			.people{ width: 100%; padding: 0 rem(30); box-sizing: border-box;
+				li{ margin-bottom: 0; padding: rem(50) 0 rem(20); border-bottom: 1px solid #a6a6a6; }
+				h3{ font-size: rem(36); margin-bottom: rem(15); }
+				p{ font-size: rem(24); line-height: rem(48); margin-bottom: rem(20); padding-left: 0; 
+					span{ display: inline; position: static; }
+				}
+			}
+			.blue{ padding: rem(100) rem(30) 0; font-size: rem(24); line-height: rem(36); width: auto; margin: 0 auto; margin-bottom: rem(240); }
+			.you_submit{ display: none; }
+			.ty_connect1{ padding: rem(50) 0;}
+			.ty_connect2{ padding-bottom: rem(100); }
+		}
+		.icon{ width: rem(40); height: rem(40); background-size: rem(120) rem(40); }
+		.icon_qq{ background-position: rem(-40) 0; }
+		.icon_wx{ background-position: rem(-80) 0; }
+		.icon_bottom{ background-size: rem(40) rem(40); margin-top: rem(100); }
 	}
 }
 // 导航
@@ -184,13 +250,14 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff; }
 		i{ display: block; width: 100px; height: 1px; background-color: #e8e8e8; margin: 20px 0 16px; }
 		.time1{ display: block; color: #eabc2b; font-size: 14px; }
 		.time2{ display: block; color: #535353; font-size: 12px; }
+		.time3{ display: none; }
 		img{ width: 100%; }
 		&:first-child{ margin-left: 0; padding-top: 200px; }
 	}
 	.ty_more{ position: absolute; right: 0; bottom: 0;  border: 60px solid #0073b6; border-width: 40px 60px; }
 }
 // 内容页
-.ty_bannar{ height: 400px; width: 100%; min-width: 1260px; overflow: hidden;
+.ty_bannar{ height: 400px; width: 100%; min-width: 1260px; overflow: hidden; min-height: 400px;
 	img{ height: 100%; position: relative; left: 50%; transform: translateX(-50%); min-width: 100%; min-height: 100%; }
 }
 .ty_text_con{ padding: 120px 60px 100px; margin-top: -130px;
@@ -248,6 +315,44 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff; }
 .icon_right{ background-image: url("../../images/ty/right.png"); }
 .backTop{ cursor: pointer; position: fixed; bottom: 80px; right: 50px; }
 // 动画
+
+.ty_index_de1,.ty_index_news li,.xn_common_box>div,.ty_nav_in .logo,.ty_nav_in .nav,.xn_brand_list img,.ty_connect_con p,.ty_connect_con img,.you_submit,.xn_news_slider,.xn_news_items p,.xn_news_items img,.ty_text_con p,.ty_text_con img,.xn_news_list li,.xn_items_txt{
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+
+.an_toTop {
+    animation: toTop 0.5s linear 0s;
+    -webkit-animation: toTop 0.5s linear 0s;
+    -ms-animation: toTop 0.5s linear 0s;
+    animation-fill-mode : both;
+    opacity: 1 !important;
+    filter: alpha(opacity=100) !important;
+}
+.an_toBottom {
+    animation: toBottom 0.5s linear 0s;
+    -webkit-animation: toBottom 0.5s linear 0s;
+    -ms-animation: toBottom 0.5s linear 0s;
+    animation-fill-mode : both;
+    opacity: 1 !important;
+    filter: alpha(opacity=100) !important;
+}
+.an_show {
+    animation: show 0.7s linear 0s;
+    -webkit-animation: show 0.7s linear 0s;
+    -ms-animation: show 0.7s linear 0s;
+    animation-fill-mode : both;
+    opacity: 1 !important;
+    filter: alpha(opacity=100) !important;
+}
+.an_toRight {
+    animation: toRight 0.5s linear 0s;
+    -webkit-animation: toRight 0.5s linear 0s;
+    -ms-animation: toRight 0.5s linear 0s;
+    animation-fill-mode : both;
+    opacity: 1 !important;
+    filter: alpha(opacity=100) !important;
+}
 .an_toLeft {
     animation: toLeft 0.5s linear 0s;
     -webkit-animation: toLeft 0.5s linear 0s;
@@ -266,4 +371,60 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff; }
 @keyframes toTop{
 	0%{ transform:translate3d(0px,100px,0); opacity: 0;filter: alpha(opacity= 0); }
 	100%{ transform:translate3d(0px,0px,0); opacity: 1;filter: alpha(opacity= 100);}
+}
+@-webkit-keyframes toTop{
+	0%{-webkit-transform:translate3d(0px,100px,0); opacity: 0;filter: alpha(opacity= 0); }
+	100%{-webkit-transform:translate3d(0px,0px,0); opacity: 1;filter: alpha(opacity= 100);}
+}
+@-ms-keyframes toTop{
+	0%{-ms-transform:translate3d(0px,100px,0); opacity: 0;filter: alpha(opacity= 0);}
+	100%{-ms-transform:translate3d(0px,0px,0); opacity: 1;filter: alpha(opacity= 100);}
+}
+@keyframes toBottom{
+	0%{ transform:translate3d(0px,-100px,0); opacity: 0;filter: alpha(opacity= 0); }
+	100%{ transform:translate3d(0px,0px,0); opacity: 1;filter: alpha(opacity= 100);}
+}
+@-webkit-keyframes toBottom{
+	0%{-webkit-transform:translate3d(0px,-100px,0); opacity: 0;filter: alpha(opacity= 0); }
+	100%{-webkit-transform:translate3d(0px,0px,0); opacity: 1;filter: alpha(opacity= 100);}
+}
+@-ms-keyframes toBottom{
+	0%{-ms-transform:translate3d(0px,-100px,0); opacity: 0;filter: alpha(opacity= 0);}
+	100%{-ms-transform:translate3d(0px,0px,0); opacity: 1;filter: alpha(opacity= 100);}
+}
+@keyframes toRight{
+	0%{ transform:translate3d(-100px,0px,0); opacity: 0;filter: alpha(opacity= 0); }
+	100%{ transform:translate3d(0px,0px,0); opacity: 1;filter: alpha(opacity= 100);}
+}
+@-webkit-keyframes toRight{
+	0%{-webkit-transform:translate3d(-100px,0px,0px); opacity: 0;filter: alpha(opacity= 0); }
+	100%{-webkit-transform:translate3d(0px,0px,0); opacity: 1;filter: alpha(opacity= 100);}
+}
+@-ms-keyframes toRight{
+	0%{-ms-transform:translate3d(-100px,0px,0); opacity: 0;filter: alpha(opacity= 0);}
+	100%{-ms-transform:translate3d(0px,0px,0); opacity: 1;filter: alpha(opacity= 100);}
+}
+@keyframes toLeft{
+	0%{ transform:translate3d(100px,0px,0); opacity: 0;filter: alpha(opacity= 0); }
+	100%{ transform:translate3d(0px,0px,0); opacity: 1;filter: alpha(opacity= 100);}
+}
+@-webkit-keyframes toLeft{
+	0%{-webkit-transform:translate3d(100px,0,0); opacity: 0;filter: alpha(opacity= 0); }
+	100%{-webkit-transform:translate3d(0px,0px,0); opacity: 1;filter: alpha(opacity= 100);}
+}
+@-ms-keyframes toLeft{
+	0%{-ms-transform:translate3d(100px,0px,0); opacity: 0;filter: alpha(opacity= 0);}
+	100%{-ms-transform:translate3d(0px,0px,0); opacity: 1;filter: alpha(opacity= 100);}
+}
+@keyframes show{
+	0%{  opacity: 0;filter: alpha(opacity= 0); }
+	100%{ opacity: 1;filter: alpha(opacity= 100);}
+}
+@-webkit-keyframes show{
+	0%{ opacity: 0;filter: alpha(opacity= 0); }
+	100%{ opacity: 1;filter: alpha(opacity= 100);}
+}
+@-ms-keyframes show{
+	0%{  opacity: 0;filter: alpha(opacity= 0);}
+	100%{ opacity: 1;filter: alpha(opacity= 100);}
 }
