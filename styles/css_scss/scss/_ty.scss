@@ -71,8 +71,8 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff; }
 			.ty_more{ position: static; margin: 0 auto; border-width: 0; background-color: #0073b6; color: #fff; margin: rem(90) 0; }
 		}
 		.backTop{ right: rem(30); z-index: 10; }
-		.ty_bannar{ height: rem(400); width: 100%; min-width: 0; overflow: hidden; min-height: 0;
-			img{ width: auto; height: rem(400); position: relative; left: 50%; transform: translateX(-50%); min-width: 0; min-height: 0; z-index: 9; }
+		.ty_bannar{ height: rem(400); width: 100%; min-width: 0; overflow: visible; min-height: 0; position: relative;
+			img{ width: auto; height: rem(400); position: relative; left: 50%; transform: translateX(-50%); min-width: 0; min-height: 0; z-index: 9; min-width: 100%; min-height: 100%; display: block; }
 		}
 		.ty_text_con{ padding: rem(100) rem(30); margin-top: 0;
 			h2{ font-size: rem(48); margin-bottom: rem(55); line-height: rem(70);
@@ -119,14 +119,18 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff; }
 		.icon_qq{ background-position: rem(-40) 0; }
 		.icon_wx{ background-position: rem(-80) 0; }
 		.icon_bottom{ background-size: rem(40) rem(40); margin-top: rem(100); }
-		.ty_nav,.ty_nav2{ height: rem(118); line-height: rem(118); width: 100%; min-width: 0; position: static; border-bottom: rem(10) solid #0073b6; position: relative; box-sizing: border-box;
+		.ty_nav,.ty_nav2{ height: rem(118); line-height: rem(118); width: 100%; min-width: 0; position: static;  position: relative; box-sizing: border-box;
 			.ty_nav_in{ text-align: center; }
 			.logo{ float: none; margin-left: 0; padding-top: 0;
 				img{ width: rem(270); padding-top: rem(15); display: inline-block; }
 			}
 			.nav{ display: none; }
+		}
+
+		.bbbb{ border-bottom: rem(10) solid #0073b6;
 			&:after{ content: ""; position: absolute; right: 0; bottom: rem(-10); width: 50%; height: rem(10); background-color: #fdb918; }
 		}
+
 		.icon_menu{ width: rem(60); height: rem(60); display: block; position: absolute; right: rem(30); top: rem(24); background-size: rem(60) rem(60); background-image: url("../../images/ty/phone_menu.png"); background-color: #fff; }
 		.open_nav{ 
 			.ty_nav_in{ height: auto; }
@@ -307,7 +311,7 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff; }
 	.ty_more{ position: absolute; right: 0; bottom: 0;  border: 60px solid #0073b6; border-width: 40px 60px; }
 }
 // 内容页
-.ty_bannar{ height: 400px; width: 100%; min-width: 1260px; overflow: hidden; min-height: 400px;
+.ty_bannar{ height: 400px; width: 100%; min-width: 1260px; overflow: hidden; min-height: 400px; 
 	img{ height: 100%; position: relative; left: 50%; transform: translateX(-50%); min-width: 100%; min-height: 100%; }
 }
 .ty_text_con{ padding: 120px 60px 100px; margin-top: -130px;
