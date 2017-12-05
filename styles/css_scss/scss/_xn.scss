@@ -19,11 +19,6 @@ body {
 @media screen and (min-width:0px) and (max-width:768px) {
     body {
         min-width: 0;
-        .xn_news_slider {
-            width: 100%;
-            float: none;
-            margin: 0 auto;
-        }
         .xn_news_items {
             width: 96%;
             float: none;
@@ -43,12 +38,12 @@ body {
             overflow: hidden;
         }
         .xn_common_rbox {
-            width: 96%;
+            width: 94%;
             float: none;
             margin: 0 auto;
         }
         .xn_common_lbox {
-            width: 96%;
+            width: 94%;
             float: none;
             margin: 0 auto;
         }
@@ -100,6 +95,9 @@ body {
             }
         }
         .xn_news_slider {
+             width: 100%;
+            float: none;
+            margin: 0 auto;
             .xn_slider_top {
                 display: none;
             }
@@ -114,24 +112,62 @@ body {
                     box-sizing: border-box;
                     border-bottom: 0;
                     font-size: $font-16;
-                    padding-left: 8px;
+                    padding: 10px 0;
+                    padding-left: 18px;
+                    font-size: 14px;
                 }
                 li.active:before {
-                    width: 14px;
-                    height: 14px;
+                    width: 12px;
+                    height: 12px;
                     background: #fdb918;
                     content: "";
                     position: absolute;
                     left: 5px;
-                    top: 20px;
+                    top: 15px;
                 }
             }
         }
         .about_margin_top {
             margin-top: 10px;
         }
-        .xn_pro_infos{
+        .xn_pro_infos {
             width: 100%;
+        }
+        .main_box {
+            display: block;
+            margin: 0 auto;
+        }
+        .xn_pro_infos {
+            margin-bottom: 0;
+        }
+        .xn_pages {
+            display: none;
+        }
+        .xn_news_items {
+            .xn_news_list {
+                li {
+                    padding: 20px 0;
+                }
+                li:last-child {
+                    border-bottom: none;
+                }
+            }
+        }
+        .xn_brand_list {
+            img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+        .xn_brand_box {
+            a {
+                margin: 19px 19px;
+            }
+        }
+        .xn_brand_box {
+            .title {
+                padding: 10px 0;
+            }
         }
     }
 }
@@ -474,6 +510,7 @@ body {
         margin-bottom: 10px;
     }
     img {
+        width: 100%;
         margin: 10px 0;
         object-fit: cover;
     }
@@ -598,6 +635,13 @@ body {
     }
     a:nth-child(5n+5) {
         margin-right: 0;
+    }
+}
+
+.xn_brand_list {
+    img {
+        width: 140px;
+        height: 140px;
     }
 }
 
