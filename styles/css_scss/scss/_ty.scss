@@ -127,9 +127,10 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff; }
 			.nav{ display: none; }
 			&:after{ content: ""; position: absolute; right: 0; bottom: rem(-10); width: 50%; height: rem(10); background-color: #fdb918; }
 		}
-		.icon_menu{ width: rem(60); height: rem(60); display: block; position: absolute; right: rem(30); top: rem(24); background-size: rem(60) rem(60); background-image: url("../../images/ty/phone_menu.png"); }
+		.icon_menu{ width: rem(60); height: rem(60); display: block; position: absolute; right: rem(30); top: rem(24); background-size: rem(60) rem(60); background-image: url("../../images/ty/phone_menu.png"); background-color: #fff; }
 		.open_nav{ 
 			.ty_nav_in{ height: auto; }
+			.icon_menu{ background-image: url("../../images/ty/phone_close.jpg"); }
 			.nav{ display: block; float: none; color: #fff; font-size: 14px; margin-left: 0; height: 100%; position: fixed; left: 0; top: rem(118); z-index: 11; width: 100%; background-color: #fff; padding-top: rem(50);
 				>li{ float: none; padding: 0; cursor: pointer; position: relative; line-height: rem(60);
 					>span,>a{ color: #808080; 
