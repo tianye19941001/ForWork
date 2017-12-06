@@ -150,5 +150,7 @@ $(document).ready(function(){
     			$('body').addClass('oh')
     		}
     	})
+
+    	$( $('.ty_bannar').length ? '.ty_bannar' : '.ty_nav,.ty_nav2').addClass('bbbb');
 	}
 });
