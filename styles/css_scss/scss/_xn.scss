@@ -118,7 +118,6 @@ body {
             }
         }
         .xn_about_bottom {
-            font-size: rem(18);
             padding-top: rem(30);
             .title {
                 font-size: rem(30);
@@ -190,6 +189,7 @@ body {
             display: none;
         }
         .xn_news_items {
+            padding-bottom: rem(50);
             .xn_txt_title {
                 font-size: rem(30);
                 padding: rem(20) 0;
