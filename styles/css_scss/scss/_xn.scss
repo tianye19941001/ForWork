@@ -40,12 +40,33 @@ body {
         .xn_common_rbox {
             width: 94%;
             float: none;
-            margin: 0 auto;
+            margin: 0 auto rem(20);
+            font-size: rem(26);
+            .btn_submit {
+                margin-top: rem(22);
+                letter-spacing: rem(15);
+                padding: rem(20) 0;
+                font-size: rem(30);
+            }
         }
         .xn_common_lbox {
             width: 94%;
             float: none;
             margin: 0 auto;
+            .company_name {
+                font-size: rem(30);
+                padding: rem(35) 0 rem(25);
+            }
+            .company_txt {
+                font-size: rem(22);
+                line-height: rem(40);
+            }
+            .company_contact {
+                span {
+                    display: block;
+                }
+                
+            }
         }
         .xn_about_items {
             width: 100%;
@@ -56,46 +77,67 @@ body {
                 margin-right: 0;
                 img {
                     width: 100%;
+                    margin-top: rem(10);
                 }
                 p {
-                    font-size: $font-14;
-                    margin-top: 8px;
-                    margin-bottom: 10px;
+                    font-size: rem(18);
+                    margin-top: rem(10);
+                    margin-bottom: rem(10);
                 }
             }
         }
         .xn_about_top {
-            margin-bottom: 30px;
+            margin-bottom: rem(30);
             .xn_about_gs {
                 width: 100%;
+                .title {
+                    font-size: rem(30);
+                }
             }
             .xn_about_txt {
                 margin-left: 0;
                 width: 100%;
                 ul {
                     li {
-                        font-size: $font-14;
+                        font-size: rem(24);
                     }
                 }
             }
+            ul {
+                .about_title {
+                    padding: rem(25) 0;
+                    font-size: rem(28);
+                }
+            }
+        }
+        .xn_about_title {
+            margin-top: rem(40);
+            margin-bottom: rem(75);
+            .title {
+                font-size: rem(30);
+            }
         }
         .xn_about_bottom {
-            font-size: $font-14;
-            padding-top: 30px;
+            font-size: rem(18);
+            padding-top: rem(30);
+            .title {
+                font-size: rem(30);
+                margin-bottom: rem(30);
+            }
         }
         .xn_common_box {
-            padding: 20px 0;
+            padding: rem(30) 0;
         }
         .xn_common_footer {
             .copyright {
                 background: #fff;
                 color: #000;
-                font-size: $font-14;
-                padding: 10px 10px;
+                font-size: rem(24);
+                padding: rem(20);
             }
         }
         .xn_news_slider {
-             width: 100%;
+            width: 100%;
             float: none;
             margin: 0 auto;
             .xn_slider_top {
@@ -111,27 +153,31 @@ body {
                     float: left;
                     box-sizing: border-box;
                     border-bottom: 0;
-                    font-size: $font-16;
-                    padding: 10px 0;
-                    padding-left: 18px;
-                    font-size: 14px;
+                    font-size: rem(26);
+                    padding: rem(20) 0;
+                    padding-left: rem(32);
+                    font-size: rem(24);
                 }
                 li.active:before {
-                    width: 12px;
-                    height: 12px;
+                    width: rem(20);
+                    height: rem(20);
                     background: #fdb918;
                     content: "";
                     position: absolute;
-                    left: 5px;
-                    top: 15px;
+                    left: rem(10);
+                    top: rem(28);
                 }
             }
         }
         .about_margin_top {
-            margin-top: 10px;
+            margin-top: rem(20);
         }
         .xn_pro_infos {
             width: 100%;
+            .xn_infos_title {
+                font-size: rem(32);
+                margin: rem(20) 0;
+            }
         }
         .main_box {
             display: block;
@@ -144,29 +190,71 @@ body {
             display: none;
         }
         .xn_news_items {
+            .xn_txt_title {
+                font-size: rem(30);
+                padding: rem(20) 0;
+            }
+            .xn_txt_subtitle {
+                font-size: rem(24);
+                line-height: rem(34);
+            }
             .xn_news_list {
                 li {
-                    padding: 20px 0;
+                    padding: rem(30) 0;
                 }
                 li:last-child {
                     border-bottom: none;
                 }
             }
+            .xn_txt_date {
+                margin-top: rem(20);
+                font-size: rem(40);
+            }
+            .xn_date_year {
+                font-size: rem(24);
+            }
         }
         .xn_brand_list {
             img {
-                width: 80px;
-                height: 80px;
+                width: rem(90);
+                height: rem(90);
             }
         }
         .xn_brand_box {
             a {
-                margin: 19px 19px;
+                margin: rem(29);
             }
         }
         .xn_brand_box {
             .title {
-                padding: 10px 0;
+                padding: rem(20) 0;
+                font-size: rem(40);
+            }
+            .xn_brand_list {
+                margin-bottom: rem(40);
+            }
+        }
+        .xn_brand_box a:nth-child(5n+5) {
+            margin: rem(29);
+        }
+        .main_box {
+            min-height: auto;
+        }
+        .xn_pro_txt {
+            font-size: rem(24);
+            .title {
+                font-size: rem(34);
+                margin: rem(18) 0;
+            }
+            p {
+                margin: rem(16) 0;
+                line-height: rem(35);
+            }
+        }
+        .xn_common_line {
+            height: rem(10);
+            .line_yellow {
+                height: rem(10);
             }
         }
     }
