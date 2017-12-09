@@ -55,12 +55,39 @@
 			<div class="ty_connect1">
 				<h2 class="ty_tit_cn">联系方式</h2>
 				<em class="ty_tit_en">Contact information</em>
-				<img src="images/ty/E_05.png" alt="">
+				<div class="ty_map">
+					<div id="container"></div>
+				</div>
 				<div class="location">
 					<h3>中国时代远望科技有限公司</h3>
 					<p>总部地址：北京海淀区蓝靛厂南路59号玲珑花园商务楼三层<br>总部邮编：100097 <br>直拨电话：010-88491909 <br>总部电话：010-88490025 010-88491188 <br>电子邮箱：tree815@126.com</p>
-					<span><a class="icon icon_wb" href=""></a><a class="icon icon_qq" href=""></a><a class="icon icon_wx" href=""></a></span>
+					<!-- <span><a class="icon icon_wb" href=""></a><a class="icon icon_qq" href=""></a><a class="icon icon_wx" href=""></a></span> -->
 				</div>
+				<div id="control">
+			        <div class="pageShow">
+			            <h3>搜索行车路径</h3>
+			            <input id="star" placeholder="行车开始地址">
+			            <input id="end" placeholder="行车结束地址" value="中国时代远望科技有限公司">
+			            <a id="car" href="javascript:void(0);">
+			                点击搜索
+			            </a>
+
+			            <h3>搜索公交路径</h3>
+			            <input id="bStar" placeholder="公交开始地址">
+			            <input id="bEnd" placeholder="公交结束地址"  value="中国时代远望科技有限公司">
+			            <a id="bus" href="javascript:void(0);">
+			                点击搜索
+			            </a>
+
+			            <h3>搜索步行路径</h3>
+			            <input id="wStar" placeholder="步行开始地址">
+			            <input id="wEnd" placeholder="步行结束地址"  value="中国时代远望科技有限公司">
+			            <a id="walk" href="javascript:void(0);">
+			                点击搜索
+			            </a>
+			        </div>
+			    </div>
+			    <div id="r-results" class="res"></div>
 			</div>
 			<div class="ty_connect2">
 				<!-- <h2 class="ty_tit_cn">合作联系</h2> -->
