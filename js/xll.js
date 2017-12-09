@@ -156,4 +156,65 @@ $(document).ready(function(){
 
     	$( $('.ty_bannar').length ? '.ty_bannar' : '.ty_nav,.ty_nav2').addClass('bbbb');
 	}
+
+	if ($('.ty_map').length>0) {
+		var map = new BMap.Map("container");
+	    // 洪泽湖坐标
+	    var point = new BMap.Point(116.299818,39.94346);
+	    map.centerAndZoom(point, 12);
+	    map.addControl(new BMap.ScaleControl());
+	    map.addControl(new BMap.OverviewMapControl());
+	    map.addControl(new BMap.MapTypeControl());
+	    //启用滚动放大
+	    map.enableScrollWheelZoom()
+	    // 创建标注
+	    var marker = new BMap.Marker(point);
+	    marker.enableDragging();
+	    //本地搜索
+	    var local = new BMap.LocalSearch(map, {
+	        renderOptions: {map: map}
+	    });
+	    local.search('中国时代远望科技有限公司');
+
+	    //驾车路线
+	    var driving = new BMap.DrivingRoute(map, {
+	        renderOptions: {
+	            map: map,
+	            autoViewport: true,
+	            panel: "r-results"
+	        }
+	    });
+	    //步行路线
+	    var walking = new BMap.WalkingRoute(map, {
+	        renderOptions: {
+	            map: map,
+	            panel: "r-results"
+	        }
+	    });
+	    //公交路线
+	    var transit = new BMap.TransitRoute(map, {
+	        renderOptions: {map: map, panel: "r-results"}
+	    });
+	    $(function () {
+	        // 行车
+	        $('#car').on('click', function () {
+	            driving.search($('#star').val(), $('#end').val());
+	            $('#r-results').show();
+	        })
+	        // 公交
+	        $('#bus').on('click', function () {
+	            transit.search($('#bStar').val(), $('#bEnd').val());
+	            $('#r-results').show();
+	        })
+	        // 步行
+	        $('#walk').on('click', function () {
+	            walking.search($('#wStar').val(), $('#wEnd').val());
+	            $('#r-results').show();
+	        })
+	    })
+	    $('#map').on('click', function () {
+	    	local.search('中国时代远望科技有限公司');
+	    	$('.ty_dialog').show();
+	    })
+	}
 });
