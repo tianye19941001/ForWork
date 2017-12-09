@@ -127,7 +127,10 @@ $(document).ready(function(){
 	}
 
 	$('body').on('click','.ty_swiper',function(){
-		console.log(111)
+	})
+
+	$('.nav').hover(function(){
+		$(this).removeClass('an_toLeft').addClass('op1')
 	})
 
 	if (document.body.clientWidth>=768) {
