@@ -8,8 +8,10 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff; }
 
 .demo{ width: 100px; }
 .phone{ display: none; }
-.ha{ height: auto !important; }
+.ha{ height: 800px !important; }
 .oh{ overflow: hidden; }
+.op1{ opacity: 1 !important;
+filter: alpha(opacity=100) !important; }
 @media screen and (min-width:0px) and (max-width:768px){
 	body{ min-width: 0;
 		.phone{ display: block; }
@@ -162,7 +164,7 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff; }
 				}
 				.on{
 					>a,>span{ position: relative;
-						&:after{content: ""; position: absolute; left: 0; top: rem(54); width: 100%; height: 2px; background-color: #fdb918;}
+						&:after{content: ""; position: absolute; left: 0; top: rem(50); width: 100%; height: 2px; background-color: #fdb918;}
 					}
 				}
 				a{ color: #fff; }
@@ -184,7 +186,7 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff; }
 			li{ line-height: 40px; white-space: nowrap; }
 		}
 		a{ color: #fff; }
-		i{ display: inline-block;  
+		i{ display: inline-block; display: none; 
         margin: 4px; margin-left: 15px;
         border-right: 1px solid; border-bottom: 1px solid;  
         width: 7.5px; height: 7.5px;  
@@ -209,17 +211,21 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff; }
 			&:after{
 
 			}
-			ul{ position: absolute; top: 70px; left: 25px; display: none; z-index: 9; background-color: #fff; padding: 0 15px; margin-left: -15px;  }
+			ul{ position: absolute; top: 70px; left: 25px; display: none; z-index: 9; background-color: #fff; padding: 0 15px; margin-left: -15px; z-index: 10; }
 			li{ line-height: 40px; white-space: nowrap; }
 		}
 		a{ color: #4c4c4c; 
 			&:hover{ color: #0073b6; }
 		}
 		.on{
-			>a,>span{ color: #0073b6 }
-			i{ display: block; }
+			>a,>span{ display: inline-block; color: #0073b6 ; position: relative;
+				&:after{
+					content: ""; position: absolute; left: 0; top: 55px; width: 100%; height: 2px; background-color: #fdb918;
+				}
+			}
+
 		}
-		i{ display: inline-block;  
+		i{ display: inline-block;  display: none;
         margin: 4px; margin-left: 15px;
         border-right: 1px solid; border-bottom: 1px solid;  
         width: 7.5px; height: 7.5px;  
@@ -235,9 +241,12 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff; }
 	.icon_left,.icon_right{ position: absolute; top: 50%; margin-top: -20px; right: 50px; z-index: 4; cursor: pointer; }
 	.icon_left{ left: 50px; }
 	.pagination{
-		position: absolute; left: 50%; margin-left: -630px; width: 1260px; bottom: 100px; z-index: 10;
+		position: absolute; left: 50%; margin-left: -630px; width: 1260px; bottom: 100px; z-index: 10; box-sizing: border-box; padding-left: 65px;
 		.swiper-pagination-switch{ display: inline-block; width: 30px; height: 2px; background-color: #c4c4c4; margin-right: 10px; }
 		.swiper-active-switch{ background-color: #fff; }
+	}
+	.index{
+		display: block; position: absolute; left: 50%; margin-left: -630px; width: 1260px; bottom: 75px; z-index: 10; font-size: 46px; color: #fff;
 	}
 }
 .ty_index_de1{ padding-top: 80px;
@@ -359,6 +368,7 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff; }
 	}
 	.ty_connect1{ padding: 50px 0;}
 	.ty_connect2{ padding-bottom: 130px; }
+	.ty_connect3{ padding: 50px 0; }
 }
 .icon{ display: inline-block; width: 40px; height: 40px; background-image: url("../../images/ty/icons.png") }
 .icon_wb{ background-position: 0 0; }
