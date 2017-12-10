@@ -145,6 +145,7 @@ $(document).ready(function(){
     	$('.ty_nav_in').append(menuEle);
 
     	$('body').on('click','.icon_menu',function(){
+    		$('html,body').animate({scrollTop: 0},600);
     		if($('.ty_nav2').hasClass('open_nav')){
     			$('.ty_nav2').removeClass('open_nav');
     			$('body').removeClass('oh')
