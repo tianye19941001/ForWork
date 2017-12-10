@@ -40,9 +40,10 @@ body {
         .xn_common_box {
             width: 100%;
             overflow: hidden;
+            min-height: 0;
         }
         .xn_common_footer{
-            background-position: center rem(870);
+            background-position: center rem(590);
             background-repeat: no-repeat;
             background-size: 100% auto;
         }
@@ -79,6 +80,7 @@ body {
                 span {
                     display: block;
                 }
+                img{ height: rem(300); }
                 
             }
         }
