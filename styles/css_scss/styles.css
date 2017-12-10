@@ -1468,8 +1468,9 @@ body {
       margin: 0 auto; }
       body .xn_news_items .items_pic {
         width: 100%; }
-      body .xn_news_items .xn_items_txt {
-        width: 100%; }
+      body .xn_news_items .xn_txt_date {
+        font-size: 0.7222222222rem;
+        padding: 0.4166666667rem 0; }
     body .main_box {
       width: 100%; }
     body .xn_common_box {
@@ -1485,6 +1486,8 @@ body {
         letter-spacing: 0.4166666667rem;
         padding: 0.5555555556rem 0;
         font-size: 0.8333333333rem; }
+      body .xn_common_rbox .ty_nav_in, body .xn_common_rbox .ty_nav2 {
+        display: none; }
     body .xn_common_lbox {
       width: 94%;
       float: none;
@@ -1595,9 +1598,6 @@ body {
       padding: 0.8333333333rem 0; }
     body .xn_news_items .xn_news_list li:last-child {
       border-bottom: none; }
-    body .xn_news_items .xn_txt_date {
-      margin-top: 0.5555555556rem;
-      font-size: 1.1111111111rem; }
     body .xn_news_items .xn_date_year {
       font-size: 0.6666666667rem; }
     body .xn_brand_list img {
@@ -1700,11 +1700,6 @@ body {
   .xn_news_items .xn_news_list li {
     padding: 55px 0;
     border-bottom: 1px solid #dadada; }
-  .xn_news_items .items_pic {
-    width: 30%;
-    display: inline-block;
-    margin-right: 2%;
-    vertical-align: top; }
   .xn_news_items .xn_items_txt {
     width: 67%;
     display: inline-block;
@@ -1718,13 +1713,17 @@ body {
     color: #595959;
     line-height: 24px; }
   .xn_news_items .xn_txt_date {
-    text-align: right;
+    text-align: center;
     margin-top: 10px;
     font-size: 30px;
-    color: #fdb918; }
-    .xn_news_items .xn_txt_date .xn_date_year {
-      font-size: 14px;
-      color: #535353; }
+    color: #0073b6;
+    background: #ccc;
+    width: 26%;
+    display: inline-block;
+    margin-right: 2%;
+    vertical-align: top;
+    font-size: 18px;
+    padding: 8px 0; }
 
 .xn_pages {
   margin: 60px auto 120px;
@@ -1951,8 +1950,18 @@ body {
 
 .xn_common_rbox {
   float: right;
-  width: 660px;
-  font-size: 16px; }
+  font-size: 16px;
+  text-align: right; }
+  .xn_common_rbox a {
+    color: #fff !important;
+    cursor: pointer; }
+  .xn_common_rbox .ty_nav_in, .xn_common_rbox .ty_nav2 {
+    width: 800px; }
+    .xn_common_rbox .ty_nav_in li span, .xn_common_rbox .ty_nav2 li span {
+      color: #fff; }
+  .xn_common_rbox .ty_nav2 .nav > li ul {
+    background: transparent;
+    display: block; }
   .xn_common_rbox input {
     border: none;
     width: 100%;
