@@ -26,8 +26,12 @@ body {
             .items_pic {
                 width: 100%;
             }
+            .xn_txt_date{
+                font-size: rem(26);
+                padding: rem(15) 0; 
+            }
             .xn_items_txt {
-                width: 100%;
+               
             }
         }
         .main_box {
@@ -54,6 +58,9 @@ body {
                 font-size: rem(30);
                 border-radius: 0;
                 margin-bottom: rem(70);
+            }
+            .ty_nav_in,.ty_nav2{
+                display: none;
             }
         }
         .xn_common_lbox {
@@ -213,10 +220,6 @@ body {
                     border-bottom: none;
                 }
             }
-            .xn_txt_date {
-                margin-top: rem(20);
-                font-size: rem(40);
-            }
             .xn_date_year {
                 font-size: rem(24);
             }
@@ -361,12 +364,6 @@ body {
             border-bottom: 1px solid #dadada;
         }
     }
-    .items_pic {
-        width: 30%;
-        display: inline-block;
-        margin-right: 2%;
-        vertical-align: top;
-    }
     .xn_items_txt {
         width: 67%;
         display: inline-block;
@@ -383,14 +380,17 @@ body {
         line-height: 24px;
     }
     .xn_txt_date {
-        text-align: right;
+        text-align: center;
         margin-top: 10px;
         font-size: $font-30;
-        color: #fdb918;
-        .xn_date_year {
-            font-size: $font-14;
-            color: #535353;
-        }
+        color: #0073b6;
+        background: #ccc;
+        width: 26%;
+        display: inline-block;
+        margin-right: 2%;
+        vertical-align: top;
+        font-size: 18px;
+        padding: 8px 0;
     }
 }
 
@@ -676,8 +676,25 @@ body {
 
 .xn_common_rbox {
     float: right;
-    width: 660px;
     font-size: $font-16;
+    text-align: right;
+    a{
+        color: #fff !important;
+        cursor: pointer;
+    }
+    .ty_nav_in,.ty_nav2{
+        width: 800px;
+        li{
+            span{
+                color: #fff;
+            }
+        }
+    }
+    .ty_nav2 .nav > li ul{
+        background: transparent;
+        display: block;
+    }
+    
     input {
         border: none;
         width: 100%;
