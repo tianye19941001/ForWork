@@ -138,13 +138,13 @@ filter: alpha(opacity=100) !important; }
 		.open_nav{ 
 			.ty_nav_in{ height: auto; }
 			.icon_menu{ background-image: url("../../images/ty/phone_close.jpg"); }
-			.nav{ display: block; float: none; color: #fff; font-size: 14px; margin-left: 0; height: 100%; position: fixed; left: 0; top: rem(118); z-index: 11; width: 100%; background-color: #fff; padding-top: rem(50); overflow: scroll;
+			.nav{ display: block; float: none; color: #fff; font-size: 14px; margin-left: 0; height: 100%; position: fixed; left: 0; top: rem(118); z-index: 11; width: 100%; background-color: #fff; padding-top: rem(20); overflow: scroll;
 				>li{ float: none; padding: 0; cursor: pointer; position: relative; line-height: rem(60);
 					>span,>a{ color: #808080; 
 						
 					}
 					&:after{
-						content: ""; width: 1px; height: 2px; background-color: #eaeaea; height: rem(64); display: block; margin: 0 auto;
+						content: ""; width: 1px; height: 2px; background-color: #eaeaea; height: rem(30); display: block; margin: 0 auto;
 					}
 					&:last-child{
 						&:after{ display: none; }
@@ -159,7 +159,7 @@ filter: alpha(opacity=100) !important; }
 						i{ border-color: #0073b6; }
 					}
 					ul{ position: static; display: block; z-index: 11; background-color: #fff; padding: 0 15px; margin-left: 0;  }
-					li{ line-height: rem(60); white-space: nowrap; font-size: 12px;
+					li{ line-height: rem(50); white-space: nowrap; font-size: 12px;
 						a{ color: #919191; }
 					}
 				}
@@ -377,6 +377,10 @@ filter: alpha(opacity=100) !important; }
 		width: 90%; height: 450px; display: block; margin: 0 auto;
 		img{ width: auto;}
 	}
+}
+
+.xn_common_rbox .ty_nav2 .nav{
+	.nav_in{ text-align: center; left: 50%; transform: translateX(-50%); margin-left: 0; }
 }
 
 #control{ width: 1000-720-40px; padding: 20px; float: left; margin-left: 60px; padding-top: 60px;
