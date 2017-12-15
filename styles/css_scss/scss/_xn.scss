@@ -105,6 +105,7 @@ body {
         .xn_about_top {
             margin-bottom: rem(30);
             .xn_about_gs {
+                padding-top: 0;
                 width: 100%;
                 .title {
                     font-size: rem(30);
@@ -493,6 +494,7 @@ body {
     margin-bottom: 70px;
     .xn_about_gs {
         width: 40%;
+        padding-top: 12px;
         display: inline-block;
         vertical-align: top;
         overflow: hidden;
@@ -516,7 +518,7 @@ body {
     ul {
         li {
             font-size: $font-12;
-            color: #999;
+            color: #333;
             padding: 20px 0;
             border-bottom: 1px solid #eee;
         }
@@ -548,7 +550,7 @@ body {
 
 .xn_about_bottom {
     font-size: $font-12;
-    color: #999;
+    color: #333;
     border-top: 1px solid #d3d3d3;
     padding-top: 100px;
     .title {

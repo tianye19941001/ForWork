@@ -137,26 +137,30 @@ $(document).ready(function(){
 		// pc事件和方法
 
 	}else{
+		var menuEle = $("<span class='icon_menu'></span>");
+		$('.ty_nav_in').append(menuEle);
 	    // 移动事件和方法
 	    // 一些初始化操作
 	    $('.ty_nav').attr('class','ty_nav2');
     	$('.logo img').attr("src",$('.logo img').attr('src').replace(/logo1/,"logo2"));
-    	var menuEle = $("<span class='icon_menu'></span>");
-    	$('.ty_nav_in').append(menuEle);
-
-    	$('body').on('click','.icon_menu',function(){
-    		$('html,body').animate({scrollTop: 0},600);
-    		if($('.ty_nav2').hasClass('open_nav')){
-    			$('.ty_nav2').removeClass('open_nav');
-    			$('body').removeClass('oh')
-    		}else{
-    			$('.ty_nav2').addClass('open_nav');
-    			$('body').addClass('oh')
-    		}
-    	})
 
     	$( $('.ty_bannar').length ? '.ty_bannar' : '.ty_nav,.ty_nav2').addClass('bbbb');
 	}
+
+	$('.ty_nav_in').on('click','.icon_menu',function(){
+		$('html,body').animate({scrollTop: 0},600);
+		if($('.ty_nav2').hasClass('open_nav')){
+			$('.ty_nav2').removeClass('open_nav');
+			$('body').removeClass('oh');
+			$('.ty_swiper,.ty_bannar,.ty_con,.xn_common_footer').show()
+			
+		}else{
+			$('.ty_nav2').addClass('open_nav');
+			$('body').addClass('oh')
+			$('.ty_swiper,.ty_bannar,.ty_con,.xn_common_footer').hide()
+
+		}
+	})
 
 	if ($('.ty_map').length>0) {
 		var map = new BMap.Map("container");

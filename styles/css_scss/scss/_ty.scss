@@ -9,11 +9,12 @@ body{ font-family: '微软雅黑'; min-width: $minW; background-color: #fff; }
 .demo{ width: 100px; }
 .phone{ display: none; }
 .ha{ height: 800px !important; }
-.oh{ overflow: hidden; }
+.oh{ overflow: hidden; height: 100%; }
 .op1{ opacity: 1 !important;
 filter: alpha(opacity=100) !important; }
+.fix{position: fixed; top: 0; left: 0;}
 @media screen and (min-width:0px) and (max-width:768px){
-	body{ min-width: 0;
+	body{ min-width: 0; width: 100% !important; height: auto !important; overflow: hidden !important;
 		.phone{ display: block; }
 		.ty_con{ width: 100%; margin-top: 0; position: relative; z-index: 3; }
 		.ty_swiper{ height: rem(620); overflow: hidden; position: relative; min-width: 0;
@@ -74,7 +75,7 @@ filter: alpha(opacity=100) !important; }
 			.ty_more{ position: static; margin: 0 auto; border-width: 0; background-color: #0073b6; color: #fff; margin: rem(90) 0; }
 		}
 		.backTop{ right: rem(30); z-index: 10; }
-		.ty_bannar{ height: rem(400); width: 100%; min-width: 0; overflow: visible; min-height: 0; position: relative;
+		.ty_bannar{ height: rem(400); min-width: 0; overflow: hidden; min-height: 0; position: relative;
 			img{ width: auto; height: rem(400); position: relative; left: 50%; transform: translateX(-50%); min-width: 0; min-height: 0; z-index: 9; min-width: 100%; min-height: 100%; display: block; }
 		}
 		.ty_text_con{ padding: rem(100) rem(30); margin-top: 0;
@@ -130,10 +131,13 @@ filter: alpha(opacity=100) !important; }
 			.nav{ display: none; }
 		}
 
-		.bbbb{ border-bottom: rem(10) solid #0073b6;
+		.ty_bannar.bbbb{ padding-bottom: rem(10); background-color: #0073b6;
+			&:after{ content: ""; position: absolute; right: 0; bottom: 0; width: 50%; height: rem(10); background-color: #fdb918; }
+		}
+		.ty_nav2.bbbb{
+			 border-bottom: rem(10) solid #0073b6;
 			&:after{ content: ""; position: absolute; right: 0; bottom: rem(-10); width: 50%; height: rem(10); background-color: #fdb918; }
 		}
-
 		.icon_menu{ width: rem(60); height: rem(60); display: block; position: absolute; right: rem(30); top: rem(24); background-size: rem(60) rem(60); background-image: url("../../images/ty/phone_menu.png"); background-color: #fff; }
 		.open_nav{ 
 			.ty_nav_in{ height: auto; }
@@ -146,7 +150,7 @@ filter: alpha(opacity=100) !important; }
 					&:after{
 						content: ""; width: 1px; height: 2px; background-color: #eaeaea; height: rem(30); display: block; margin: 0 auto;
 					}
-					&:last-child{
+					&:last-child{ padding-bottom: rem(180);
 						&:after{ display: none; }
 					}
 					&:hover{ 
